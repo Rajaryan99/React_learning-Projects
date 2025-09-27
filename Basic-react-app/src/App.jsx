@@ -1,16 +1,17 @@
 
 import './App.css'
 import Title from './Title.jsx';
+import Name from './name.jsx';
 
 
 function App() {
-  let name = 'rajaryan'
 
   return (
     <>
       <Title />
-      <h1>{name.toUpperCase()}</h1>
+       <Name />
       <p>Hello world! 2 * 2 =  {2 * 2}</p>
+     
       <button>click me</button>
 
     </>
