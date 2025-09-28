@@ -8,11 +8,15 @@ function App() {
 
   return (
     <>
-      <Title />
-       <Name />
-      <p>Hello world! 2 * 2 =  {2 * 2}</p>
-     
-      <button>click me</button>
+ 
+
+      <Name name="Satish" des="nandni"/>
+
+      <Name name="Misty" des="Shivam" />
+
+      <Name name="Sandhya" des="Undefined" />
+      
+
 
     </>
   )

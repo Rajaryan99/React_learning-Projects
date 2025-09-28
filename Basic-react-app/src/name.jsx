@@ -1,11 +1,13 @@
 import './name.css';
 
 
-function Name() {
-    let name = ' Arnav Chodu '
+function Name({name, des}) {
+
+    // let name = ' Arnav'
     return (
         <div className="Name">
-            <h1>{name.toUpperCase()}</h1>
+            <h1>{name}</h1>
+            <p>{des}</p>
         </div>
     )
 }
