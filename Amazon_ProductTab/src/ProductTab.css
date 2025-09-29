@@ -1,0 +1,14 @@
+.Product {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(103, 196, 240);
+    overflow: hidden;
+    margin-left: 15px;
+    
+
+}
+
+.Product h1{
+   
+}

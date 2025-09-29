@@ -1,0 +1,9 @@
+.old {
+    text-decoration: line-through;
+}
+
+.Price {
+    padding-top: 10px;
+    height: 30px;
+    background-color: darkgoldenrod;
+}
