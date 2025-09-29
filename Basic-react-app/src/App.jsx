@@ -1,15 +1,15 @@
 
 import './App.css'
-import Title from './Title.jsx';
-import Name from './name.jsx';
-import MsgBox from './msgBox.jsx';
+import ProductTab from './ProductTab';
+
 
 
 
 function App() {
   return (
    <>
-      <MsgBox userName="Rajaryan" textColor="red"/>
+   <h1 style={color="balck"}>hello</h1>
+    <ProductTab />
    </>
   )
 }
