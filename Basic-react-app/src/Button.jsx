@@ -1,6 +1,7 @@
 
-function printHello(){
-    console.log('hello World')
+function printHello(event){
+    console.log('hello World');
+    console.log(event);
 }
 
 function mouserHover(){
@@ -12,7 +13,7 @@ function mouserHover(){
 export default function Button() {
     return (
         <div>
-            <button onMouseOver={mouserHover}>Click me!</button>
+            <button onMouseOver={printHello}>Click me!</button>
         </div>
     );
 }
