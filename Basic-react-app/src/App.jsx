@@ -1,6 +1,7 @@
 
 import './App.css'
 import ProductTab from './ProductTab';
+import Button from './Button';
 
 
 
@@ -8,8 +9,7 @@ import ProductTab from './ProductTab';
 function App() {
   return (
    <>
-   <h1 style={color="balck"}>hello</h1>
-    <ProductTab />
+      <Button/>   
    </>
   )
 }
