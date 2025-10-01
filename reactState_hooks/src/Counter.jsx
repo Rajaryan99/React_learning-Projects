@@ -7,9 +7,6 @@ export default function Counter() {
         setCount(count + 1);
     }
 
-
-
-
     return (
         <div>
             <h3>Count = {count}</h3>
