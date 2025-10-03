@@ -2,16 +2,14 @@
 import './App.css'
 import Counter from './Counter'
 import LikeButton from './LikeButton'
+import LudoBorad from './LudoBorad'
 
 function App() {
   
 
   return (
     <>
-      <h5>States in React</h5>
-      {/* <Counter/> */}
-      <LikeButton/>
-      
+     <LudoBorad/>
     </>
   )
 }
