@@ -22,6 +22,18 @@ export default function TodoList() {
         setTodos(todos.filter((todo) => todo.id != id));
     }
 
+    let upperCaseAll = () => {
+        setTodos((pretask) => {
+            pretask.map((todo) => {
+            return {
+                ...todo,
+                task: todo.task.toUpperCase(),
+            }
+        })
+        })
+        
+    }
+
     return (
         <div>
             <input type="text" placeholder="Add a Task" value={newTodo} onChange={updateTodoValue} /><br /><br />
@@ -40,6 +52,8 @@ export default function TodoList() {
                             </li>
 
                     ))}
+
+                    <button onClick={upperCaseAll}>upparCase all</button>
             </ul>
         </div>
     )
