@@ -3,12 +3,12 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function TodoList() {
 
-    let [todos, setTodos] = useState([{task: "sample-task", id: uuidv4()}]);
+    let [todos, setTodos] = useState([{task: "sample-task", id: uuidv4(), isdone: false}]);
     let [newTodo, setNewTodo] =useState('');
 
     let addNewTask = () => {
        setTodos((prevTodos) => {
-        return [...prevTodos, {task: newTodo, id: uuidv4()}]
+        return [...prevTodos, {task: newTodo, id: uuidv4(), isdone: false}]
        });
 
        setNewTodo('');
@@ -23,12 +23,17 @@ export default function TodoList() {
     }
 
     let upperCaseAll = () => {
-        setTodos((pretask) => {
-            pretask.map((todo) => {
-            return {
+        setTodos((prevTodos) => {
+            prevTodos.map((todo) => {
+                if(todo.id == id){
+                     return {
                 ...todo,
                 task: todo.task.toUpperCase(),
             }
+                } else {
+                    return todo;
+                }
+           
         })
         })
         
