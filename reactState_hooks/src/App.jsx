@@ -5,13 +5,14 @@ import LikeButton from './LikeButton'
 import LudoBorad from './LudoBorad'
 import TodoList from './TodoList'
 import Lottery from './lottery'
+import Ticket from './Ticket'
 
 function App() {
   
 
   return (
     <>
-     <Lottery/>
+     <Ticket  ticket={[0, 1, 2]} />
     </>
   )
 }
