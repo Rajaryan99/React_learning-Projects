@@ -9,7 +9,11 @@ export default function Form() {
     })
 
     let handleInputChange = (e) => {
-        console.log(e.target.value);
+
+        setfieldData((currData) => {
+            return {...currData, [e.target.name]: e.target.value}
+        })
+
     }
 
     // let [username, setUsername] = useState('');
@@ -22,17 +26,23 @@ export default function Form() {
     //     setfullname(e.target.value)
     // }
 
+    let handleSubmit = (e) => {
+        e.preventDefault();
+        setfieldData({
+            fullname: '',
+            username: ''
+        })
+        console.log(fieldData);
+    }
+
     return(
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <label htmlFor="fullname"> Full Name</label>
             <input type="text" id="fullname" name="fullname" placeholder="Enter Your fullname" value={fieldData.fullname} onChange={handleInputChange} />
-             <button>submit</button>
 <br />
-              <form action="">
             <label htmlFor="username"> Username</label>
             <input type="text" id="Username" name="username" placeholder="Enter Your username" value={fieldData.username} onChange={handleInputChange} />
-             <button>submit</button>
-        </form>
+             <button type="submit">submit</button>
         </form>
         
     )
