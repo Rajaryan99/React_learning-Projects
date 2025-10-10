@@ -11,7 +11,17 @@ export default function CommentForm() {
 
     let handleInputChange = (e) => {
         setformData((currData) => {
-            return {...currData}
+            return {...currData, [e.target.name]: e.target.value}
+        })
+    }
+
+    let handleCommentBtn = (e) => {
+        console.log(formData);
+        e.preventDefault();
+        setformData({
+            username: '',
+        remarks: '',
+        rating: 5
         })
     }
 
@@ -19,20 +29,23 @@ export default function CommentForm() {
         <div>
             <h1>Give a comment!</h1>
             <form action="">
-                <input type="text" placeholder='Username' value={formData.username} />
+                <label htmlFor="Username">Username - </label>
+                <input  id='Username' name='username' type="text" placeholder='Username' value={formData.username} onChange={handleInputChange} />
                 <br />
-                <textarea name="" id="" 
+                <label htmlFor="textarea">Comment -  </label>
+                <textarea name="remarks" id="textarea" 
                 rows={10}
                  cols={40}
                  placeholder='Write  a comment!'
                  value={formData.remarks}
+                 onChange={handleInputChange}
                  >
-            
                  </textarea>
                  <br />
-                 <input type="number" placeholder='Rating' min={1} max={5} value={formData.rating} />
+                 <label htmlFor="rating">Rating -   </label>
+                 <input id='rating' name='rating' type="number" placeholder='Rating' min={1} max={5} value={formData.rating} onChange={handleInputChange} />
             <br /><br />
-                <button>Add Comment</button>
+                <button onClick={handleCommentBtn}>Add Comment</button>
             </form>
         </div>
     )
