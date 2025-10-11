@@ -1,7 +1,6 @@
 
 import './App.css'
-import Form2 from './Form2'
-import Counter from './Counter'
+import Joker from './Joker'
 
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
 
   return (
     <>
-     <Counter/>
+     <Joker/>
     </>
   )
 }
