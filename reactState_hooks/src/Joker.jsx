@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Joker(){
     let [joke, setjoke] = useState({});
@@ -11,6 +11,17 @@ export default function Joker(){
        console.log(jsonRes);
        setjoke({ setup: jsonRes.setup, punchline: jsonRes.punchline});
     }
+
+    useEffect(() => {
+        async function getFirstJoke() {
+            let res =  await fetch(URL);
+            let jsonRes = await res.json();
+            console.log(jsonRes);
+            setjoke({ setup: jsonRes.setup, punchline: jsonRes.punchline});
+        }
+        getFirstJoke();
+}, []);
+
     return (
         <div>
             <h1>Joker!</h1>
