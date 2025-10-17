@@ -8,7 +8,11 @@ function App() {
 
   return (
     <>
-     <Joker/>
+     <h1>React and Hooks</h1>
+
+    <h3>Counter value: 5</h3>
+
+    
     </>
   )
 }
